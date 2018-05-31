@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: cephfs2
+  name: ceph-demo
 spec:
   containers:
   - name: cephfs-rw
