@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: cephfs-rw
-    image: nginx
+    image: tomcat:8.0.52-jre8
     volumeMounts:
     - mountPath: "/mnt/cephfs"
       name: cephfs-demo
