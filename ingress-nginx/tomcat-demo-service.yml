@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: tomcat-demo-v8-service
+spec:
+  selector:
+    app: tomcat-demo-v8
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080

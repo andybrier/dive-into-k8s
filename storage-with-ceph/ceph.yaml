@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cephfs2
+spec:
+  containers:
+  - name: cephfs-rw
+    image: nginx
+    volumeMounts:
+    - mountPath: "/mnt/cephfs"
+      name: cephfs-demo
+  volumes:
+  - name: cephfs-demo
+    cephfs:
+      monitors:
+      - 192.168.104.97:6789
+      user: admin
+      secretRef:
+        name: ceph-secret
+      readOnly: true
